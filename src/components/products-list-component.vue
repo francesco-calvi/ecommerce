@@ -1,5 +1,5 @@
 <template>
-<div class="products-component" :class="{'less-than-3': filteredProducts[0].length<3}">    
+<div class="products-component" :class="{'less-than-3': filteredProducts && filteredProducts[index].length<3}">    
   <div class="products-list">
     <ProductComponent v-for="product in filteredProducts[index]" v-bind:key="product.id" :id="product.id" @click="goToDetail(product.id)" />
   </div>
@@ -35,14 +35,19 @@ export default {
   },
   computed: {
     ...mapState(['searchValue', 'gender', 'index']),
-    ...mapGetters(['filteredByGender']),    
+    ...mapGetters(['filteredByGender']),        
   },
   async beforeMount() {
     const store = this.$store;
     if(store.state.products.length == 0) {     
       await store.dispatch('getProductsAction');
     }
-    this.filteredProducts = this.filterProducts();
+    this.filteredProducts = this.filterProducts();    
+  },
+  created() {
+    if(this.searchValue) {
+      this.filterBySearchInput();
+    }
   },
   watch: {
     gender: {
@@ -57,7 +62,7 @@ export default {
       immediate: true, 
       handler(val, oldVal) {
           if(val!=oldVal){
-            this.filterBySearchInput();
+            this.filteredProducts = this.filterBySearchInput();
           }
       }
     },
@@ -115,15 +120,16 @@ export default {
       return filteredProducts;
     },
     filterBySearchInput() {
-      if(this.searchValue.trim()==" ") return;
-      if(this.searchValue != "") {
-          let filtered = this.filteredByGender.filter(p => 
-              p.name.toLowerCase().includes(this.searchValue.toLowerCase())
-          );
-          this.filterProducts(filtered);
-      } else {
-          this.filterProducts(this.filteredByGender);   
+      let filtered = this.filteredByGender.filter(p => {
+        if(
+        p.name.toLowerCase().includes(this.searchValue.toLowerCase()) ||
+        p.category.toLowerCase().includes(this.searchValue.toLowerCase())
+        ){
+          return p;
+        } 
       }
+      );
+      return this.filterProducts(filtered);
     },
     onChildClick(value) {
         this.updateIndex(value-1);
@@ -140,7 +146,6 @@ export default {
       this.$router.push({name: 'product-detail', params: {id: id}})
     },
     filterByAdditionalFilter(filter) { 
-      console.log('filter by '+ filter.type)
       switch(filter.type) {
         case 'price': {
           this.orderByPrice(filter);
@@ -151,7 +156,6 @@ export default {
           break;
         }
         default: {
-          console.log('default')
           this.filteredProducts = this.filterProducts();
         }
       }
@@ -173,7 +177,6 @@ export default {
           break;
         }
       }
-      console.log(temp)
       this.filteredProducts = this.filterProducts(temp);
     },
     filterBySize() {

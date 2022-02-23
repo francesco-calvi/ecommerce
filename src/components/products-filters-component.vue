@@ -88,13 +88,7 @@ export default {
       const res = [...filters];
       const sizeFilter = {
         text: 'Taglia',
-        options: []        
-      }
-      if(this.gender==='uomo') {
-        sizeFilter.options = sizeOptions.sizeMaleOptions;
-      }
-      if(this.gender==='donna') {
-        sizeFilter.options = sizeOptions.sizeFemaleOptions;
+        options: sizeOptions       
       }
       res.push(sizeFilter);
       return res;
@@ -205,6 +199,7 @@ export default {
   border: 1px #ccc solid;
   display: none;
   overflow: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   scrollbar-width: thin;

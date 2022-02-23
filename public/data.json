@@ -7,7 +7,7 @@
             "quantity":2,
             "gender":"M",
             "category": "shoes classic",
-            "sizes": [{"id": 2, "value": 39}],
+            "sizes": [{"value": 35.5}, {"value": 36}, {"value": 36.5}, {"value": 37}, {"value": 37.5}, {"value": 4}, {"value": 5}, {"value": 5.5}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -19,8 +19,8 @@
             "price":4.99,
             "quantity":1,
             "gender":"U",
-            "category": "T-Shirts",
-            "sizes": [{"id": 1, "value": 36}, {"id": 3, "value": 44}],
+            "category": "T-Shirts trekking",
+            "sizes": [{"value": 50}, {"value": 44}, {"value": "S"}, {"value": "M"}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -37,7 +37,7 @@
             "quantity":0,
             "gender":"U",
             "category": "pants",
-            "sizes": [],
+            "sizes": [{"value": 44}, {"value": 60}, {"value": "L"}, {"value": "XL"}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -50,7 +50,7 @@
             "quantity":60,
             "gender":"F",
             "category": "shoes heels",
-            "sizes": [{"id": 4, "value": 36.5},{"id": 5, "value": 37},{"id": 7, "value": 38}],
+            "sizes": [{"value": 35.5}, {"value": 36.5}, {"value": 37}, {"value": 37.5}, {"value": 4}, {"value": 5}, {"value": 7}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -67,7 +67,7 @@
             "quantity":10,
             "gender":"F",
             "category": "shirts",
-            "sizes": [{"id": 4, "value": 36.5},{"id": 5, "value": 37},{"id": 7, "value": 38}],
+            "sizes": [{"value": 48}, {"value": 60},  {"value": "S"},  {"value": "M"}, {"value": "L"}, {"value": "XL"}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -84,7 +84,7 @@
             "quantity":18,
             "gender":"M",
             "category": "T-Shirt skateboarding",
-            "sizes": [{"id": 2, "value": 46},{"id": 3, "value": 48},{"id": 4, "value": 50},{"id": 5, "value": 52}],
+            "sizes": [{"value": 48}, {"value": 60},  {"value": "S"},  {"value": "M"}, {"value": "L"}, {"value": "XL"}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -97,7 +97,7 @@
             "quantity":6,
             "gender":"F",
             "category": "shoes heels",
-            "sizes": [{"id": 4, "value": 36.5},{"id": 5, "value": 37},{"id": 7, "value": 38}],
+            "sizes": [{"value": 35}, {"value": 36.5}, {"value": 37}, {"value": 37.5}, {"value": 4}, {"value": 5}, {"value": 5.5}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -114,7 +114,7 @@
             "quantity":3,
             "gender":"F",
             "category": "T-Shirts",
-            "sizes": [{"id": 1, "value": 36},{"id": 3, "value": 42},{"id": 4, "value": 44},{"id": 6, "value": 48}],
+            "sizes": [{"value": 48}, {"value": 50},  {"value": "XS"},  {"value": "M"}, {"value": "L"}, {"value": "XL"}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -127,7 +127,7 @@
             "quantity":3,
             "gender":"M",
             "category": "shoes classic",
-            "sizes": [{"id": 2, "value": 46},{"id": 3, "value": 48},{"id": 4, "value": 50}],
+            "sizes": [{"value": 35}, {"value": 36.5}, {"value": 37}, {"value": 37.5}, {"value": 4}, {"value": 5}, {"value": 5.5}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -140,7 +140,7 @@
             "quantity":30,
             "gender":"M",
             "category": "shoes summer",
-            "sizes": [{"id": 2, "value": 39}],
+            "sizes": [{"value": 37}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -170,7 +170,7 @@
             "quantity":45,
             "gender":"M",
             "category": "trekking",
-            "sizes": [],
+            "sizes": [{"value": 46}, {"value": 60},  {"value": "S"},  {"value": "M"}, {"value": "L"}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -200,6 +200,7 @@
             "quantity":20,
             "gender":"M",
             "category": "jacket",
+            "sizes": [{"value": 48}, {"value": 60},  {"value": "S"},  {"value": "M"}, {"value": "L"}, {"value": "XL"}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
@@ -216,7 +217,7 @@
             "quantity":11,
             "gender":"F",
             "category": "jackets",
-            "sizes": [{"id": 5, "value": 37},{"id": 7, "value": 38}],
+            "sizes": [{"value": 44}, {"value": 48},  {"value": "M"}, {"value": "L"}, {"value": "XL"}],
             "images":[
                 {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
                 {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}

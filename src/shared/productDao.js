@@ -1,11 +1,9 @@
 import { data } from './data.js';
 
-const getProducts = async function() {                       
-    console.log('Fetching data ...')
+const getProducts = async function() {
     try {
         return await data.getData(); 
-    } catch (error) {
-        console.log('MockData Loaded');       
+    } catch (error) {     
         return data.mockData.products;
     }
 }

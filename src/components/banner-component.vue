@@ -112,9 +112,18 @@ h4 {
   .background {
     display: block;
   }
+
+  .img-container {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
-
+@media screen and (max-width: 530px) {
+  .img-container {
+    width: 100%;
+  }
+}
 
 
 

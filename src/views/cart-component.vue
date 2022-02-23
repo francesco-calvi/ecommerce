@@ -116,7 +116,18 @@ h5.total-info {
 }
 
 .payment-choises {
-  padding: 0;
+  padding: 0
 }
+
+@media screen and (max-width:810px) {
+  .background {
+    display: block;
+  }
+
+  .background > div {
+    width: auto;
+  }
+}
+
 
 </style>

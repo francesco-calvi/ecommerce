@@ -1,14 +1,13 @@
 <template>
   <div class="carousel-container">
-    <div class="carousel" v-if="listType=='products'" ref="carousel" id="carousel">          
+    <div class="carousel" v-if="this.listType==='products'" ref="carousel" id="carousel">          
       <ProductComponent :id="product.id" 
                         v-for="product in list" 
                         :key="product.id"
                         :isCarousel="true"/>        
     </div> 
-    <div class="carousel" v-else-if="listType=='product images'" ref="carousel" id="carousel">
-      <div class="img" v-for="img in list" 
-                        :key="img.url">
+    <div class="carousel" v-else ref="carousel" id="carousel">
+      <div class="img" v-for="img in this.list" v-bind:key="img.url">
         <img :src="img.url" alt="">
       </div>
     </div>
@@ -35,24 +34,46 @@ export default {
       type: [],
       required: true
     },
-    listType: {
-      type: String,
-      required: true
-    }
   },
   data() {
     return {
       isStartPos: true,
-      isEndPos: false
+      isEndPos: false,
     }
   },
-  mounted() {
-    let carousel = this.$refs.carousel;
-    if(carousel.scrollWidth==carousel.clientWidth) {
-        this.isEndPos = true;
-    } 
+  mounted() {  
+    if(this.listType!=='products') {
+      this.isEndPos = false;
+    } else {
+      this.checkCarouselWidth();
+    }
+  },  
+  computed: {
+    listType() {
+      try {
+        if(this.list) {
+          if(this.list[0].url) {
+            return 'images';
+          } else {
+            return 'products';
+          }
+        } else {
+          return null;
+        }
+      } catch(e) {
+        return null;
+      }
+    },
   },
-  methods: {
+  methods: {    
+    checkCarouselWidth() {
+      setTimeout(() => {
+        let carousel = this.$refs.carousel;
+        if(carousel.scrollWidth === carousel.clientWidth) {
+            this.isEndPos = true;
+        }
+      }, 500)
+    },
     isCarouselStartPos(position) {
       this.isStartPos = position<=0;
     },
@@ -67,14 +88,20 @@ export default {
       let carousel = this.$refs.carousel;
       let newPosition;
       switch(direction) {
-        case 'left': {
+        case 'left': {                   
           newPosition = carousel.scrollLeft -= 270;
+          if(this.listType==='images') {
+            newPosition = carousel.scrollLeft -= carousel.clientWidth;
+          }
           this.isCarouselStartPos(newPosition);
           this.isCarouselEndPos(newPosition);
           break;
         }
         case 'right': {
           newPosition = carousel.scrollLeft += 270;
+          if(this.listType==='images') {
+            newPosition = carousel.scrollLeft += carousel.clientWidth;
+          }
           this.isCarouselStartPos(newPosition);
           this.isCarouselEndPos(newPosition);
           break;
@@ -109,7 +136,7 @@ export default {
 .btn {
   width: 40px;
   position: absolute;
-  top: 50%;
+  top: calc(50% - 20px);
   cursor: pointer;
   padding: 8px;
   background: #f1f1f1;
@@ -127,6 +154,10 @@ export default {
 
 .right-btn {
   right: 0;
+}
+
+.img {
+  min-width: fit-content;
 }
 
 .img img {

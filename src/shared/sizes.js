@@ -1,180 +1,179 @@
-const femaleShoesSizes = [
+const shoesSizesIT = [
     {    
         id:1,      
-        it:35,
-        us:4,
+        value:35,        
         available:false
     },
     {
         id:2,
-        it:35.5,
-        us:4.5,
+        value:35.5,
         available:false
     },
     {       
         id:3, 
-        it:36,
-        us:5,
+        value:36,
         available:false
     },
     {       
         id:4, 
-        it:36.5,
-        us:5.5,
+        value:36.5,
         available:false
     },
     {
         id:5,
-        it:37,
-        us:5.5,
+        value:37,
         available:false
     },
     {       
         id:6, 
-        it:37.5,
-        us:6,
+        value:37.5,
         available:false
     },
     {       
         id:7, 
-        it:38,
-        us:6.5,
+        value:38,
         available:false
     },
     {
         id:8,
-        it:38.5,
-        us:7,
+        value:38.5,
         available:false
     }
 ];
 
-const maleShoesSizes = [
-    {
-        id:1,
-        it:39,
-        us:6.5,
+const shoesSizesUS = [
+    {    
+        id:9, 
+        value:4,
         available:false
     },
     {
-        id:2,
-        it:40,
-        us:7,
+        id:10,
+        value:4.5,
+        available:false
+    },
+    {       
+        id:11,
+        value:5,
+        available:false
+    },
+    {
+        id:12,
+        value:5.5,
+        available:false
+    },
+    {       
+        id:13,
+        value:6,
+        available:false
+    },
+    {       
+        id:14,
+        value:6.5,
+        available:false
+    },
+    {
+        id:15,
+        value:7,
         available:false
     }
 ];
 
-// scarpe uomo
-// 25	39	5,5	7,5
-// 25,4	39,5	6	7,5
-// 25,7	40	6,5	8
-// 26	40,5	7	8,5
-// 26,4	41	7,5	9
-// 26,7	41,5	7,5	9,5
-// 27	42	8	9,5
-// 27,4	42,5	8,5	10
-// 27,7	43	9	10,5
-
-
-const femalePantsAndTShirtSizes = [
+const pantsAndTShirtSizesIT = [
     {    
         id:1,      
-        it:36,
-        us:'XXS',
+        value:36,
         available:false
     },
     {        
         id:2,      
-        it:38,
-        us:'XS',
+        value:38,
         available:false
     },
     {        
         id:3,      
-        it:42,
-        us:'M',
+        value:42,
         available:false
     },
     {        
         id:4,      
-        it:44,
-        us:'L',
+        value:44,
         available:false
     },
     {        
         id:5,      
-        it:46,
-        us:'XL',
+        value:46,
         available:false
     },
     {        
         id:6,      
-        it:48,
-        us:'XXL',
-        available:false
-    },
-];
-
-const malePantsAndTShirtSizes = [
-    {    
-        id:1,      
-        it:44,
-        us:'S',
-        available:false
-    },
-    {        
-        id:2,      
-        it:46,
-        us:'S',
-        available:false
-    },
-    {        
-        id:3,      
-        it:48,
-        us:'M',
-        available:false
-    },
-    {        
-        id:4,      
-        it:50,
-        us:'M',
-        available:false
-    },
-    {        
-        id:5,      
-        it:52,
-        us:'L',
-        available:false
-    },
-    {        
-        id:6,      
-        it:54,
-        us:'L',
+        value:48,
         available:false
     },
     {        
         id:7,      
-        it:56,
-        us:'XL',
+        value:50,
         available:false
     },
     {        
         id:8,      
-        it:58,
-        us:'XL',
+        value:52,
         available:false
     },
     {        
         id:9,      
-        it:60,
-        us:'XXL',
+        value:54,
+        available:false
+    },
+    {        
+        id:10,      
+        value:56,
+        available:false
+    },
+    {        
+        id:11,      
+        value:58,
+        available:false
+    },
+    {        
+        id:12,      
+        value:60,
         available:false
     },
 ];
 
-const categories = ['shoes','pants','T-shirts', 'shirts', 'jackets', 'hats', 'accessories'];
+const pantsAndTShirtSizesUS = [
+    {    
+        id:16,      
+        value:'XS',
+        available:false
+    },
+    {        
+        id:17,      
+        value:'S',
+        available:false
+    },
+    {        
+        id:18,      
+        value:'M',
+        available:false
+    },
+    {        
+        id:19,      
+        value:'L',
+        available:false
+    },
+    {        
+        id:20,      
+        value:'XL',
+        available:false
+    }
+];
 
-// export
+// categories+subcategories
+export const categories = ['shoes','pants','T-Shirts', 'shirts', 'jackets', 'hats', 'accessories', 'trekking', 'skateboarding', 'ski'];
+
+// subcategories
 export const clothing = ['pants', 'T-Shirts', 'shirts', 'jackets'];
 export const sport = ['trekking', 'skateboarding', 'ski'];
 export const shoes = ['classic', 'summer', 'heels'];
@@ -183,38 +182,38 @@ export const sizes = {
     categories: [
         {
             name: categories[0],
-            male: maleShoesSizes,            
-            female: femaleShoesSizes
+            it: shoesSizesIT,            
+            us:shoesSizesUS
         },
         {
             name: categories[1],
-            male: malePantsAndTShirtSizes,
-            female: femalePantsAndTShirtSizes
+            it: pantsAndTShirtSizesIT,
+            us: pantsAndTShirtSizesUS
         },
         {
             name: categories[2],
-            male: malePantsAndTShirtSizes,
-            female: femalePantsAndTShirtSizes
+            it: pantsAndTShirtSizesIT,
+            us: pantsAndTShirtSizesUS
         },
         {
             name: categories[3],
-            male: malePantsAndTShirtSizes,
-            female: femalePantsAndTShirtSizes
+            it: pantsAndTShirtSizesIT,
+            us: pantsAndTShirtSizesUS
         },
         {
             name: categories[4],
-            male: malePantsAndTShirtSizes,
-            female: femalePantsAndTShirtSizes
+            it: pantsAndTShirtSizesIT,
+            us: pantsAndTShirtSizesUS
         },
         {
             name: categories[5],
-            male: malePantsAndTShirtSizes,
-            female: femalePantsAndTShirtSizes
+            it: pantsAndTShirtSizesIT,
+            us: pantsAndTShirtSizesUS
         },
         {
             name: categories[6],
-            male: malePantsAndTShirtSizes,
-            female: femalePantsAndTShirtSizes
+            it: pantsAndTShirtSizesIT,
+            us: pantsAndTShirtSizesUS
         }
     ]
 }

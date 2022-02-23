@@ -59,8 +59,6 @@ export default {
       const radio1Value = this.$refs.radio1.checked;
       const radio2Value = this.$refs.radio2.checked;
 
-      console.log(radio1Value, radio2Value)
-
       if(this.checkEmailValidity(emailInput.value)) {        
         this.emailInputValidity = true;
       } else {

@@ -100,7 +100,7 @@
     width: 40%;
     margin: 0 auto;
     text-align: start;
-    padding: 10px 200px;
+    padding: 10px;
     margin-bottom: 100px;
 }
 
@@ -142,5 +142,17 @@ hr {
 
 .go-to {    
     text-align: center;
+}
+
+@media screen and (max-width:890px) {
+    .form {
+        width: 60%
+    }
+}
+
+@media screen and (max-width:590px) {
+    .form {
+        width: 80%
+    }
 }
 </style>

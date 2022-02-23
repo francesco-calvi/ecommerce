@@ -38,6 +38,10 @@ const routes = [
     component: CartComponent
   },
   {
+    path: '/search?q=:query',
+    redirectTo: 'product-list-filtered'
+  },
+  {
     path: '/:gender/',
     component: HomeComponent,
     props: r => ({gender: r.params.gender})

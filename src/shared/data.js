@@ -20,7 +20,6 @@ const checkResponse = function(response) {
             return [];
         }
         if(typeof data != 'object') return [];
-        console.log("Data loaded correctly");
         return data.data;
     }); 
     return data;

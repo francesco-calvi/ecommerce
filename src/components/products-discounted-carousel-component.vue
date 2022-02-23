@@ -4,7 +4,7 @@
       <h2>Le migliori offerte</h2>
       <p>Scegli tra i prodotti in sconto</p>
     </div>
-    <CarouselComponent :list="this.discountedProducts" :listType="'products'" />
+    <CarouselComponent :list="this.discountedProducts" />
   </div>
 </template>
 

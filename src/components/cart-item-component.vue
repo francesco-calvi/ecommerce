@@ -120,6 +120,34 @@ export default {
 
 .del-btn::after {
   content: '|';
-  margin: 5px;
+  margin: 5px;  
+}
+
+@media screen and (max-width:510px) {
+
+  .product-detail > div.detail-top {
+    flex-direction: column;
+  }
+
+  .product-detail > div.detail-bottom {
+    flex-direction: column-reverse;
+    align-items: start;
+    position: relative;
+    margin-top: 20px;
+  }
+ 
+  .product-info {
+    margin-bottom: 10px;
+  }
+
+  .product-img {
+    width: 50%;
+  }
+
+  .product-price {
+    position: absolute;
+    right: 0;
+    top: -37px;
+  }
 }
 </style>

@@ -55,6 +55,9 @@ export default {
   --shadow:0 0 5px rgba(0, 0, 0, 0.515);
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
 body {
   margin:0;
@@ -64,7 +67,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+  
 a:visited {
   color:inherit;
 }
@@ -101,6 +104,7 @@ ul {
  box-shadow: inset 0 0 0 1px var(--black);
 }
 
+/** buttons & inputs */
 .btn {
   background: var(--black);
   color: #fff;
@@ -118,6 +122,22 @@ ul {
   background: var(--hover-background);
   transition: background-color .2s ease-in;
   color: var(--primary-color);
+}
+
+input.toggler, button.toggler {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;    
+    border: 1px #000 solid;   
+    background: #fff;
+    color: gray;
+    background: #fff;
+    height: 50px;}
+
+input.toggler:focus, button.toggler:focus {
+    background:#f1f1f1;
 }
 
 /** product */
@@ -145,6 +165,7 @@ ul {
 .dropdown { 
   display: none;
   overflow: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
