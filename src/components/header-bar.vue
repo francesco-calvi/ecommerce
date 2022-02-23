@@ -4,12 +4,13 @@
             <GenderNavbar v-if="!isLoginForm"/>
             <div class="nav-section">
                 <h2 class="logo-container" :class="{'align-start': isLoginForm || windowLessThen900()}" @click="updateGender">
-                    <a href="/#/">Ecommerce</a>
+                    <a class="link" @click="goHome">Ecommerce</a>
+                    <!-- <router-link :to="{name: 'home'}">Ecommerce</router-link> -->
                     <img src="../assets/logo.png" alt="">
                 </h2>
             </div>
             <div class="nav-section header-icons">
-                <div class="usermenu-container" data-name="login" @mouseenter="toggleMenu" @mouseleave="toggleMenu">
+                <div class="usermenu-container" data-name="login" @click="toggleMenu" @mouseenter="toggleMenu" @mouseleave="toggleMenu">
                     <div class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#666666"><path d="M86,21.5c-15.74728,0 -28.66667,12.91939 -28.66667,28.66667c0,15.74728 12.91939,28.66667 28.66667,28.66667c15.74727,0 28.66667,-12.91939 28.66667,-28.66667c0,-15.74728 -12.91939,-28.66667 -28.66667,-28.66667zM86,35.83333c8.00097,0 14.33333,6.33237 14.33333,14.33333c0,8.00097 -6.33237,14.33333 -14.33333,14.33333c-8.00097,0 -14.33333,-6.33237 -14.33333,-14.33333c0,-8.00097 6.33237,-14.33333 14.33333,-14.33333zM86,100.33333c-12.5055,0 -27.32533,2.93678 -39.7806,7.85254c-6.22764,2.45788 -11.85741,5.37749 -16.36296,9.12631c-4.50554,3.74881 -8.35645,8.81674 -8.35645,15.27116v17.91667h129v-7.16667v-10.75c0,-6.45441 -3.8509,-11.52234 -8.35645,-15.27116c-4.50554,-3.74882 -10.13531,-6.66843 -16.36295,-9.12631c-12.45527,-4.91576 -27.2751,-7.85254 -39.7806,-7.85254zM86,114.66667c10.134,0 23.98006,2.68033 34.53157,6.84473c5.27576,2.0822 9.73665,4.56436 12.44369,6.81673c2.70702,2.25238 3.1914,3.78662 3.1914,4.25521v3.58333h-100.33333v-3.58333c0,-0.46859 0.48437,-2.00283 3.19141,-4.25521c2.70703,-2.25238 7.16793,-4.73453 12.44368,-6.81673c10.55152,-4.1644 24.39757,-6.84473 34.53158,-6.84473z"></path></g></g></svg>
                     </div>
@@ -70,7 +71,14 @@ export default {
                     break;
                 }
             }
-        }    
+        },
+        goHome() {
+            if(this.$route.path!=='/') {
+                this.$router.push({name: 'home'});
+            } else {
+                this.$router.go();
+            }
+        } 
     },
     
 }
@@ -124,7 +132,7 @@ header {
     display: block;
     padding: 10px 15px;
     white-space: nowrap;
-    width: 8vw;
+    width: 100%;
 }
 
 li.login-item:hover {
@@ -137,6 +145,11 @@ li.login-item:hover {
 
 .cart-container {
     position: relative;
+}
+
+.cart-container > a {
+    width: 100%;
+    display: block;
 }
 
 .cart-container .cart-products-icon {
@@ -182,7 +195,6 @@ li.login-item:hover {
 
 .align-start {
     justify-content: start;
-    margin-left: 20px;
 }
 
 

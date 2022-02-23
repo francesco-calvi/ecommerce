@@ -206,7 +206,7 @@ export default {
   position: absolute;  
   left: 0;
   background: white;
-  min-width: 300px;
+  min-width: 200px;
   max-height: 350px;
   z-index: 1;
 }

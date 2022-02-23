@@ -17,6 +17,10 @@ const routes = [
     component: HomeComponent
   },
   {
+    path: '/ecommerce',
+    redirect: '/'    
+  },
+  {
     path: '/products/:id',
     name: 'product-detail',
     component: ProductDetailComponent,

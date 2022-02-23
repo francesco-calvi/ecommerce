@@ -25,7 +25,7 @@
         <section
           class="modal-body"
           id="modalDescription">
-          <p style="font-size: 22px;">
+          <p>
             <slot name="body"></slot>
           </p>
         </section>
@@ -90,6 +90,10 @@
     position: relative;
     padding: 10px 40px;
   }
+
+  .modal-body > p {
+      font-size: 22px;
+    }
   
   .modal-btn {
     width: 100%;
@@ -113,5 +117,19 @@
   .modal-fade-enter-active,
   .modal-fade-leave-active {
     transition: opacity .5s ease;
+  }
+
+  @media screen and (max-width:500px) {
+    .modal {
+      margin: 20px;
+    }
+
+    .modal-body {
+      padding: 20px;
+    }
+
+    .modal-body > p {
+      font-size: 16px;
+    }
   }
 </style>

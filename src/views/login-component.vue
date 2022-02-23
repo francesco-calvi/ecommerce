@@ -93,7 +93,7 @@
 .form-title {
     text-align: center; 
     padding: 0;
-    margin: 0;
+    margin: 50px 0 0 0;
 }
 
 .form {
