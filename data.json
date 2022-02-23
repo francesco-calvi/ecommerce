@@ -1,0 +1,234 @@
+{
+    "data": [
+        {   
+            "id":1,                 
+            "name": "Lorem Ipsum",
+            "price":99,
+            "quantity":2,
+            "gender":"M",
+            "category": "shoes classic",
+            "sizes": [{"value": 35.5}, {"value": 36}, {"value": 36.5}, {"value": 37}, {"value": 37.5}, {"value": 4}, {"value": 5}, {"value": 5.5}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ]
+        },
+        {      
+            "id":2,              
+            "name": "Lorem Ipsum",
+            "price":4.99,
+            "quantity":1,
+            "gender":"U",
+            "category": "T-Shirts trekking",
+            "sizes": [{"value": 50}, {"value": 44}, {"value": "S"}, {"value": "M"}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ],
+            "discounted": {
+                "value": "true",
+                "percentage": "40"
+            }         
+        },
+        {     
+            "id":3,               
+            "name": "Lorem Ipsum",
+            "price":29.99,
+            "quantity":0,
+            "gender":"U",
+            "category": "pants",
+            "sizes": [{"value": 44}, {"value": 60}, {"value": "L"}, {"value": "XL"}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ]
+        },
+        {     
+            "id":4,               
+            "name": "Lorem Ipsum",
+            "price":79.99,
+            "quantity":60,
+            "gender":"F",
+            "category": "shoes heels",
+            "sizes": [{"value": 35.5}, {"value": 36.5}, {"value": 37}, {"value": 37.5}, {"value": 4}, {"value": 5}, {"value": 7}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ],
+            "discounted": {
+                "value": "true",
+                "percentage": "20"
+            } 
+        },
+        {     
+            "id":5,               
+            "name": "Lorem Ipsum",
+            "price":49.99,
+            "quantity":10,
+            "gender":"F",
+            "category": "shirts",
+            "sizes": [{"value": 48}, {"value": 60},  {"value": "S"},  {"value": "M"}, {"value": "L"}, {"value": "XL"}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ],
+            "discounted": {
+                "value": "true",
+                "percentage": "50"
+            } 
+        },
+        {     
+            "id":6,               
+            "name": "Lorem Ipsum",
+            "price":39.99,
+            "quantity":18,
+            "gender":"M",
+            "category": "T-Shirt skateboarding",
+            "sizes": [{"value": 48}, {"value": 60},  {"value": "S"},  {"value": "M"}, {"value": "L"}, {"value": "XL"}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ]
+        },
+        {     
+            "id":7,               
+            "name": "Lorem Ipsum",
+            "price":129.99,
+            "quantity":6,
+            "gender":"F",
+            "category": "shoes heels",
+            "sizes": [{"value": 35}, {"value": 36.5}, {"value": 37}, {"value": 37.5}, {"value": 4}, {"value": 5}, {"value": 5.5}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ],
+            "discounted": {
+                "value": "true",
+                "percentage": "30"
+            }
+        },
+        {     
+            "id":8,               
+            "name": "Lorem Ipsum",
+            "price":9.99,
+            "quantity":3,
+            "gender":"F",
+            "category": "T-Shirts",
+            "sizes": [{"value": 48}, {"value": 50},  {"value": "XS"},  {"value": "M"}, {"value": "L"}, {"value": "XL"}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ]
+        },
+        {     
+            "id":9,               
+            "name": "Lorem Ipsum",
+            "price":99.99,
+            "quantity":3,
+            "gender":"M",
+            "category": "shoes classic",
+            "sizes": [{"value": 35}, {"value": 36.5}, {"value": 37}, {"value": 37.5}, {"value": 4}, {"value": 5}, {"value": 5.5}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ]
+        },
+        {     
+            "id":10,               
+            "name": "Lorem Ipsum",
+            "price":4.99,
+            "quantity":30,
+            "gender":"M",
+            "category": "shoes summer",
+            "sizes": [{"value": 37}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ],
+            "discounted": {
+                "value": "true",
+                "percentage": "10"
+            }
+        },
+        {     
+            "id":11,               
+            "name": "Lorem Ipsum",
+            "price":14.99,
+            "quantity":45,
+            "gender":"F",
+            "category": "hats",
+            "sizes": [],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ]
+        },
+        {     
+            "id":12,              
+            "name": "Lorem Ipsum",
+            "price":24.99,
+            "quantity":45,
+            "gender":"M",
+            "category": "trekking",
+            "sizes": [{"value": 46}, {"value": 60},  {"value": "S"},  {"value": "M"}, {"value": "L"}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ]
+        },
+        {     
+            "id":13,              
+            "name": "Lorem Ipsum",
+            "price":29.99,
+            "quantity":20,
+            "gender":"M",
+            "category": "accessories",
+            "sizes": [],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ],
+            "discounted": {
+                "value": "true",
+                "percentage": "5"
+            }
+        },
+        {     
+            "id":14,              
+            "name": "Lorem Ipsum",
+            "price":29.99,
+            "quantity":20,
+            "gender":"M",
+            "category": "jacket",
+            "sizes": [{"value": 48}, {"value": 60},  {"value": "S"},  {"value": "M"}, {"value": "L"}, {"value": "XL"}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ],
+            "discounted": {
+                "value": "true",
+                "percentage": "25"
+            }
+        },
+        {     
+            "id":15,               
+            "name": "Lorem Ipsum",
+            "price":29.99,
+            "quantity":11,
+            "gender":"F",
+            "category": "jackets",
+            "sizes": [{"value": 44}, {"value": 48},  {"value": "M"}, {"value": "L"}, {"value": "XL"}],
+            "images":[
+                {"url":"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="},
+                {"url":"https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg"}
+            ],
+            "discounted": {
+                "value": "true",
+                "percentage": "50"
+            } 
+        }
+    ]
+}
+
+
+
