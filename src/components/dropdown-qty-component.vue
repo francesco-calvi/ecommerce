@@ -1,5 +1,5 @@
 <template>
-  <div class="dropdown-wrapper" v-click-outside="closeDropdown">
+  <div class="dropdown-wrapper" v-click-outside="closeDropdown" :class="{'bigger': !text}">
     <div v-if="over10" class="manual-picker dropdown-toggler hover-focus-border" :class="{'bigger': !text}">
       <input type="text" v-model="qtyFromInput" :class="{'bigger': !text}" ref="input"/>   
       <button @click="toggleDropdown" class="over10" :class="{'bigger': !text}">
@@ -96,6 +96,14 @@ export default {
 
 <style scoped>
 
+.dropdown-wrapper {
+  width: 30%;
+}
+
+.dropdown-wrapper.bigger{
+  width: 100%;
+}
+
 .dropdown {
   left: 0;
   right: 0;
@@ -103,8 +111,7 @@ export default {
 }
 
 .dropdown-toggler {
-  justify-content: space-between;
-  width: 84px;
+  justify-content: space-between;    
 }
 
 .dropdown-toggler:focus {  

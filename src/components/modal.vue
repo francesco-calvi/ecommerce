@@ -1,6 +1,9 @@
 <script>
   export default {
     name: 'Modal',
+    props: {
+      danger: Boolean
+    },
     methods: {
       close() {
         this.$emit('close');
@@ -18,6 +21,7 @@
         aria-describedby="modalDescription">
         <header
           class="modal-header"
+          :class="{danger: danger}"
           id="modalTitle">
           <slot name="header"></slot>
         </header>
@@ -31,14 +35,7 @@
         </section>
 
         <footer class="modal-footer">
-          <slot name="footer"></slot>
-          <button
-            type="button"
-            class="modal-btn"
-            @click="close"
-            aria-label="Close modal">
-            OK
-          </button>
+          <slot name="footer"></slot>          
         </footer>
       </div>
     </div>
@@ -79,6 +76,10 @@
     justify-content: center;
     background: #85f765;
     opacity: 0.7;
+  }
+
+  .modal-header.danger {
+    background: var(--red);
   }
 
   .modal-footer {    

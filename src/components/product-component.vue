@@ -82,16 +82,19 @@ export default {
   padding: 10px;
 }
 
-.info > span {
-  text-align: start; 
-  display: block;
+.info > span {  
+  text-align: start;  
 }
 
 .info span.product-name {
-  margin-bottom: 5px;
-  font-family: cursive;  
+  margin-bottom: 5px; 
   color: var(--black); 
   overflow: hidden;
+  display: block;
+}
+
+.info span.unavailable {
+  display: block; 
 }
 
 .info span.price-discount {

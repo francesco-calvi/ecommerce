@@ -82,6 +82,8 @@ export default {
     },
     additionalFilters: {
       handler(val) {
+        console.log(val)
+        
         this.sizeFilters = [];
         let others = [];
         for(let i=0;i<val.length;i++) {          
@@ -90,8 +92,13 @@ export default {
           } else {
               others.push(val[i]);
           }         
-        }        
+        } 
+        if(this.sizeFilters.length===0) {
+          this.filteredProducts = this.filterProducts();          
+        } else {
+
         this.sizeFilters.forEach(el => this.filterByAdditionalFilter(el));
+        }
         others.forEach(el => this.filterByAdditionalFilter(el));
       }     
     }
@@ -121,10 +128,8 @@ export default {
     },
     filterBySearchInput() {
       let filtered = this.filteredByGender.filter(p => {
-        if(
-        p.name.toLowerCase().includes(this.searchValue.toLowerCase()) ||
-        p.category.toLowerCase().includes(this.searchValue.toLowerCase())
-        ){
+        if( p.name.toLowerCase().includes(this.searchValue.toLowerCase()) ||
+            p.category.toLowerCase().includes(this.searchValue.toLowerCase())){
           return p;
         } 
       }

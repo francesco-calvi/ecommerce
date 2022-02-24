@@ -4,7 +4,8 @@
       <div class="order-details">
         <div class="cart">
           <h4>Carrello ({{cart.length}} articoli) </h4>
-          <CartItemComponent v-for="cartItem in cart" :key="cartItem.product.id" :cartItem="cartItem" />           
+          <CartItemComponent v-for="cartItem in cart" :key="cartItem.product.id" :cartItem="cartItem" 
+          @removeCartItem="showModal" />           
         </div>
         <div class="shipment-info">
           <h4>Consegna prevista tra</h4>
@@ -23,21 +24,49 @@
         <button class="btn">Procedi con l'ordine</button>
       </div>
     </div>
+    <Modal v-show="isModalVisible" @close="closeModal" :danger="true">
+        <template v-slot:header>
+          <img src="https://img.icons8.com/office/80/000000/high-risk.png"/>
+        </template>
+        <template v-slot:body>Stai per rimuovere il prodotto! Confermi?</template>
+        <template v-slot:footer>
+          <div class="modal-btn-container">
+            <button
+                type="button"
+                class="modal-btn go-back"
+                @click="closeModal"
+                aria-label="Close modal">
+                INDIETRO
+            </button>
+            <button
+                type="button"
+                class="modal-btn"
+                @click="removeCartItem"
+                aria-label="Close modal">
+                OK
+            </button>
+          </div>
+        </template>
+    </Modal>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 import PaymentChoisesComponent from '../components/payment-choices-component.vue';
 import CartItemComponent from '../components/cart-item-component.vue';
 import checkDiscountMixin from '../mixins/checkDiscount.js';
+import Modal from '../components/modal.vue';
+
 export default {
   name: 'CartComponent',
-  components: {PaymentChoisesComponent, CartItemComponent},
+  components: {PaymentChoisesComponent, CartItemComponent, Modal},
   mixins: [checkDiscountMixin],
   data() {
     return {
-      shipment: "2.99"
+      shipment: "2.99",
+      isModalVisible: false,
+      itemToRemove: {}
     }
   },
   computed: {
@@ -64,7 +93,25 @@ export default {
         shippingTime[i] = italianDate.substring(0, 10); 
       }
       return shippingTime;
-    }    
+    },     
+  },
+  methods: {
+    ...mapActions(['removeFromCart']),
+    showModal(cartItem) {    
+      if(cartItem) {
+        this.itemToRemove = cartItem;
+      }
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    },
+    removeCartItem() {
+      if(this.itemToRemove) {
+        this.closeModal();
+        this.removeFromCart(this.itemToRemove);
+      }
+    }
   }
 }
 </script>
@@ -129,5 +176,15 @@ h5.total-info {
   }
 }
 
+</style>
+<style>
+.modal-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.modal-btn.go-back {
+  color: gray;
+}
 </style>
