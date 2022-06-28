@@ -2,37 +2,44 @@
   <div class="container background">
     <div class="text-container">
       <h1>Saldi stagionali</h1>
-      <h4>Fino al 50% su tutti gli articoli</h4>      
+      <h4>Fino al 50% su tutti gli articoli</h4>
     </div>
     <div class="img-container">
-      <img src="https://cdn.pixabay.com/photo/2016/11/22/19/08/hangers-1850082_960_720.jpg">
+      <img
+        src="https://cdn.pixabay.com/photo/2016/11/22/19/08/hangers-1850082_960_720.jpg"
+      />
     </div>
     <div class="icon-container">
-        <span class="icon">
-          <img src="https://img.icons8.com/ios/48/000000/low-importance.png" @click="scrollDown"/>          
-        </span>
+      <span class="icon">
+        <img
+          src="https://img.icons8.com/ios/48/000000/low-importance.png"
+          @click="scrollDown"
+        />
+      </span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BannerComponent',
+  name: "BannerComponent",
   methods: {
     scrollDown() {
-      let position = document.getElementById("carousel").getBoundingClientRect().top;
+      let position = document
+        .getElementById("discounted")
+        .getBoundingClientRect().top;
       window.scrollTo({
-        top: (position-100),
-        behavior: 'smooth'
-      })
-    }
-  }
-}
+        top: position,
+        behavior: "smooth",
+      });
+    },
+  },
+};
 </script>
 
 <style scoped>
 .background {
-  background-color: hsl(42,87.5%,82.88000000000001%);  
+  background-color: hsl(42, 87.5%, 82.88000000000001%);
   margin-bottom: 100px;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -46,7 +53,7 @@ export default {
 
 h1 {
   padding: 0;
-  margin: 0;  
+  margin: 0;
   font-size: 35px;
 }
 
@@ -68,11 +75,11 @@ h4 {
   justify-content: center;
 }
 
-.icon-container .icon > img {  
+.icon-container .icon > img {
   cursor: pointer;
 }
 
-.img-container {  
+.img-container {
   height: 60%;
   flex-basis: 30%;
 }
@@ -90,7 +97,7 @@ h4 {
 
   .text-container h4 {
     font-size: 25px;
-  }  
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -100,7 +107,7 @@ h4 {
 
   .text-container h4 {
     font-size: 20px;
-  } 
+  }
 
   .background {
     padding-top: 40px;
@@ -124,7 +131,4 @@ h4 {
     width: 100%;
   }
 }
-
-
-
 </style>

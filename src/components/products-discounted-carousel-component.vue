@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="discounted">
     <div class="info-box">
       <h2>Le migliori offerte</h2>
       <p>Scegli tra i prodotti in sconto</p>
@@ -9,47 +9,47 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
-import CarouselComponent from './carousel-component.vue';
+import { mapState, mapGetters } from "vuex";
+import CarouselComponent from "./carousel-component.vue";
 export default {
-  name: 'ProductsListSaleComponent',  
-  components: {CarouselComponent},
+  name: "ProductsListSaleComponent",
+  components: { CarouselComponent },
   watch: {
     gender: {
       immediate: true,
       handler(val, oldVal) {
-        if(val != oldVal) {
+        if (val != oldVal) {
           this.filterByDiscounted();
         }
-      }
-    }
+      },
+    },
   },
   computed: {
-    ...mapState(['products', 'gender']),
-    ...mapGetters(['filteredByGender']),
-    discountedProducts: function() {
+    ...mapState(["products", "gender"]),
+    ...mapGetters(["filteredByGender"]),
+    discountedProducts: function () {
       return this.filterByDiscounted();
-    }  
+    },
   },
   methods: {
     slide(direction) {
       let carousel = this.$refs.carousel;
-      switch(direction) {
-        case 'left': {
+      switch (direction) {
+        case "left": {
           carousel.scrollLeft -= 260;
           break;
         }
-        case 'right': {
+        case "right": {
           carousel.scrollLeft += 260;
           break;
         }
       }
     },
     filterByDiscounted() {
-      return this.filteredByGender.filter(p => p.discounted);
-    }
-  }
-}
+      return this.filteredByGender.filter((p) => p.discounted);
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -87,8 +87,6 @@ export default {
   display: none;
 }
 
-
-
 .btn {
   width: 40px;
   position: absolute;
@@ -111,6 +109,4 @@ export default {
 .right-btn {
   right: 0;
 }
-
-
 </style>

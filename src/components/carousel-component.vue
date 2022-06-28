@@ -1,116 +1,116 @@
 <template>
   <div class="carousel-container">
-    <div class="carousel" v-if="this.listType==='products'" ref="carousel" id="carousel">          
-      <ProductComponent :id="product.id" 
-                        v-for="product in list" 
-                        :key="product.id"
-                        :isCarousel="true"/>        
-    </div> 
+    <div
+      class="carousel"
+      v-if="this.listType === 'products'"
+      ref="carousel"
+      id="carousel"
+    >
+      <ProductComponent
+        :id="product.id"
+        v-for="product in list"
+        :key="product.id"
+        :isCarousel="true"
+      />
+    </div>
     <div class="carousel" v-else ref="carousel" id="carousel">
       <div class="img" v-for="img in this.list" v-bind:key="img.url">
-        <img :src="img.url" alt="">
+        <img :src="img.url" alt="" />
       </div>
     </div>
     <button class="btn left-btn" v-if="!isStartPos" @click="slide('left')">
       <span>
-        <img src="https://img.icons8.com/material-rounded/24/000000/chevron-left.png"/>
+        <img
+          src="https://img.icons8.com/material-rounded/24/000000/chevron-left.png"
+        />
       </span>
     </button>
     <button class="btn right-btn" v-if="!isEndPos" @click="slide('right')">
       <span>
-        <img src="https://img.icons8.com/material-rounded/24/000000/chevron-right.png"/>
+        <img
+          src="https://img.icons8.com/material-rounded/24/000000/chevron-right.png"
+        />
       </span>
     </button>
   </div>
 </template>
 
 <script>
-import ProductComponent from './product-component.vue';
+import ProductComponent from "./product-component.vue";
 export default {
-  name: 'CarouselComponent',
-  components: {ProductComponent},
+  name: "CarouselComponent",
+  components: { ProductComponent },
   props: {
     list: {
       type: [],
-      required: true
+      required: true,
     },
   },
   data() {
     return {
       isStartPos: true,
       isEndPos: false,
-    }
+    };
   },
-  mounted() {  
-    if(this.listType!=='products') {
+  mounted() {
+    if (this.listType !== "products") {
       this.isEndPos = false;
     } else {
       this.checkCarouselWidth();
     }
-  },  
+  },
   computed: {
     listType() {
-      try {
-        if(this.list) {
-          if(this.list[0].url) {
-            return 'images';
-          } else {
-            return 'products';
-          }
+      if (this.list) {
+        if (this.list[0].url) {
+          return "images";
         } else {
-          return null;
+          return "products";
         }
-      } catch(e) {
+      } else {
         return null;
       }
     },
   },
-  methods: {    
+  methods: {
     checkCarouselWidth() {
       setTimeout(() => {
         let carousel = this.$refs.carousel;
-        if(carousel.scrollWidth === carousel.clientWidth) {
-            this.isEndPos = true;
+        if (carousel.scrollWidth === carousel.clientWidth) {
+          this.isEndPos = true;
         }
-      }, 500)
+      }, 500);
     },
     isCarouselStartPos(position) {
-      this.isStartPos = position<=0;
+      this.isStartPos = position <= 0;
     },
     isCarouselEndPos(position) {
-      let carousel = this.$refs.carousel; 
+      let carousel = this.$refs.carousel;
 
-      // calc => el total width - visible width of the el - position i'm at
-      let res = (carousel.scrollWidth - carousel.clientWidth - position) <= 0;
-      this.isEndPos = res; 
+      // calc => carousel total width - visible width of the carousel - position i'm at
+      let res = carousel.scrollWidth - carousel.clientWidth - position <= 0;
+      this.isEndPos = res;
     },
     slide(direction) {
       let carousel = this.$refs.carousel;
       let newPosition;
-      switch(direction) {
-        case 'left': {                   
-          newPosition = carousel.scrollLeft -= 270;
-          if(this.listType==='images') {
-            newPosition = carousel.scrollLeft -= carousel.clientWidth;
-          }
+      switch (direction) {
+        case "left": {
+          newPosition = carousel.scrollLeft -= carousel.clientWidth;
           this.isCarouselStartPos(newPosition);
           this.isCarouselEndPos(newPosition);
           break;
         }
-        case 'right': {
-          newPosition = carousel.scrollLeft += 270;
-          if(this.listType==='images') {
-            newPosition = carousel.scrollLeft += carousel.clientWidth;
-          }
+        case "right": {
+          newPosition = carousel.scrollLeft += carousel.clientWidth;
           this.isCarouselStartPos(newPosition);
           this.isCarouselEndPos(newPosition);
           break;
         }
-      }      
+      }
     },
-  }
-
-}
+  },
+};
 </script>
 
 <style scoped>
@@ -163,5 +163,4 @@ export default {
 .img img {
   width: 100%;
 }
-
 </style>
